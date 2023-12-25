@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <template id="template-category">
+        <div class="d-flex flex-column align-items-center category-item mx-3">
+            <div class="d-flex template-category justify-content-center">
+                <img src="{{imgSrc}}">
+            </div>
+            <span>{{category}}</span>
+            <hr>
+        </div>
+    </template>
+    
+    <template id="cafe-template">
+        <a class = "ref">
+            <div class="d-flex flex-column mx-2 my-3">
+                <div class="back-and-category my-1">
+                    <span class = "font-weight-bold discount"></span>
+                    <div class = "cafe-category-box">
+                        <span class="cafe-category text-white font-weight-bold"></span>
+                    </div>
+                </div>
+                <span class="font-weight-bolder cafe-name"></span>
+                <div class="d-flex">
+                    <img class="cafe-image" src="img/rating_good.png" alt="Cafe Image">
+                    <span class="like-percent mx-2"></span>
+                    <span class="like-in-digits text-muted"></span>
+                </div>
+            </div>
+        </a>
+    </template>
+
+    <template id = "popular-categories-template">
+        <div class = "mx-2 my-2 one-popular-elem font-weight-bold">
+        </div>
+    </template>
+
+    <template id = "do-you-wanna-be-template">
+        <div class ="my-5 d-flex flex-column align-items-center one-job-box mx-2">
+            <img class = "job-img">
+            <h2 class = "job-topic"></h2>
+            <p class = "job-description"></p>
+            <a><button class = "register-button">Зареєструватися</button></a>
+        </div>
+    </template>
+
+    <header class="d-flex justify-content-between">
+        <div>
+            <img src="img/logo-glovo-2048.png" alt="Glovo Logo">
+        </div>
+        <input type="search" name="main-search" id="main-search" placeholder="Пошук" onfocus="hidePlaceholder(this)" onblur="showPlaceholder(this)"> 
+        <button class="begin-btn" type="button" id="begin-btn">Розпочати!</button>
+    </header>
+    <h1>Доставка у місті Одеса</h1>
+    <div class="input-group flex-nowrap geolocation-input mt-5 mx-auto">
+        <span class="input-group-text green-flag-input" id="addon-wrapping"><img src="https://glovoapp.com/images/icons/flag--white.svg"></span>
+        <input type="text" class="form-control" placeholder="Введіть свою адресу" pattern="/^[a-zA-Z0-9,]+$/" aria-label="Username" aria-describedby="addon-wrapping" onfocus="hidePlaceholder(this)" onblur="showPlaceholder(this)">
+    </div>
+    <div class = "d-flex categories justify-content-center mt-5"></div>
+    <div class = "d-flex flex-column bg-white white-div">
+        <div class = "d-flex span-margin">
+            <img class = "like-image" src = "img/newUserRecommendationsWidgetIconLight.png">
+            <span class ="you-can-like">Заклади,які вам можуть сподобатися</span>
+        </div>
+        <div class = "d-flex cafes my-3 justify-content-around flex-wrap mx-5"></div>
+        <div class ="cities">
+            <img src = "img/cities.svg">
+        </div>
+        <h1 class = "popular-categories">Популярні Категорії у м. Одеса</h1>
+        <div class = "d-flex popular-categories-box flex-wrap justify-content-center my-4"></div>
+        <div class = "blue-box">
+            <div class ="together">
+                <img src ="img/together.svg">
+            </div>
+            <h1 class = "join-to-us">Приєднуйтеся до нас</h1>
+            <div class = "job-box d-flex justify-content-center"></div>
+        </div>
+        <footer class = "d-flex flex-column p-5">
+            <div style = "width: 7em; margin: 2em;">
+                <img src = "img/glovo-white.svg" style = "width: 100%;">
+            </div>
+            <div class = "footer-row d-flex justify-content-between">
+                <div class = "footer-column d-flex flex-column ml-4 align-items-center">
+                    <span class = "footer-title font-weight-bold">Приєднуйтеся до нас</span>
+                    <span class = "footer-one-elem">Вакансії</span>
+                    <span class = "footer-one-elem">Glovo для партнерів</span>
+                    <span class = "footer-one-elem">Кур'єри</span>
+                    <span class = "footer-one-elem">Glovo Business</span>
+                </div>
+                <div class = "footer-column d-flex flex-column ml-4 align-items-center">
+                    <span class = "footer-title font-weight-bold">Корисні посилання</span>
+                    <span class = "footer-one-elem">Про нас</span>
+                    <span class = "footer-one-elem">Часті запитання</span>
+                    <span class = "footer-one-elem">Glovo Prime</span>
+                    <span class = "footer-one-elem">Блог</span>
+                    <span class = "footer-one-elem">Зв'язатися з нами</span>
+                    <span class = "footer-one-elem">Безпека</span>
+                </div>
+                <div class = "footer-column d-flex flex-column ml-4 align-items-center">
+                    <span class = "footer-title font-weight-bold">Ми у соціальних мережах</span>
+                    <span class = "footer-one-elem">Facebook</span>
+                    <span class = "footer-one-elem">Twitter</span>
+                    <span class = "footer-one-elem">Instagram</span>
+                </div>
+                <div class = "footer-column d-flex flex-column ml-4 align-items-center">
+                    <img src = "becomeARider/imgs/appstore.png">
+                    <img src = "becomeARider/imgs/google.png">
+                    <span class = "footer-one-elem">Політика конфіденційності</span>
+                    <span class = "footer-one-elem">Політика використання файлів cookie</span>
+                    <span class = "footer-one-elem">Комплаєнс</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

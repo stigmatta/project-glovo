@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+ <script src="script.js"></script>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"><span style="color: rgb(235, 198, 94);">Успiшно!</span></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Ваша заявка вiдправлена!
+      </div>
+    </div>
+  </div>
+</div>
+  
+    <a href = "../index.html"><div class="logo"><img src="imgs/Glovo_logo.png"></div></a>
+    <div class="container"><div class="text">Ви самі
+        вирішуєте,<br>
+         який дохід<br>
+          отримувати.
+        </div>
+        <div id="ridersInfo">
+            <h1>Зареєструйтеся і почніть співпрацю менше ніж за добу</h1>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="nameInput" placeholder="">
+            <label for="floatingInput"><span style="color: gray;font-size: 1.2em;">Ім'я та прізвище</span></label>
+          </div>
+          <div class="form-floating">
+            <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+            <label for="floatingPassword"><span style="color: gray;font-size: 1.2em;">Ел.пошта</span></label>
+          </div>
+          <div class="form-floating">
+            <select class="form-select" id="citySelect" aria-label="Floating label select example">
+                <option selected>Київ</option>
+                <option value="Харків">Харків</option>
+                <option value="Львів">Львів</option>  
+                <option value="Одеса">Одеса</option>
+                <option value="Дніпро">Дніпро</option>
+                <option value="Запоріжжя">Запоріжжя</option>
+                <option value="Івано-Франківськ">Івано-Франківськ</option>
+                <option value="Херсон">Херсон</option>
+            </select>
+            <label for="floatingSelectGrid" style="margin-top: -.7em;font-size: 1.2em;">Виберiть мiсто</label>
+          </div>
+          <div class="form-floating">
+            <input type="text" class="form-control" id="phoneInput" placeholder="">
+            <label for="floatingInput"><span style="color: gray;font-size: 1.2em;">Номер телефону</span></label>
+          </div>
+          <h1 style="font-size: 1.1em;margin-top: 1.5em;">Як ви здійснюватимете доставку?</h1>
+          <div id="transport">
+            <button class="vehicle" value="Машина" onclick="saveValue(this.value)" ><img src="imgs/car.svg"></button>
+            <button class="vehicle" value="Велосипед" onclick="saveValue(this.value)"><img src="imgs/bicycle.svg"></button>
+        </div>
+        <div id="transport">
+            <button class="vehicle" value="Скутер" onclick="saveValue(this.value)"><img src="imgs/motorbike.svg"></button>
+            <button class="vehicle" value="Пiшохiд" onclick="saveValue(this.value)"><img src="imgs/walker.svg"></button>
+        </div>
+        <button class="submit" onclick="saveUserData()">Продовжити</button>
+        <span style="font-size: smaller;text-align: center;">Натискаючи цю кнопку, ви погоджуєтеся з нашими
+        </span>
+        <div id="rules">Правила й умови</div><div id="rules">Політика конфіденційності</div>
+        </div>
+    </div>
+    <div id="benefits"><img src="imgs/Без имени-2.png"></div>
+    <div id="FAQ">
+      <span style="color: black;font-size: 2em;text-align: center;font-weight: bold;display: block;">Часті запитання</span>
+      <span style="color: black;font-size: 1em;text-align: center;display: block;margin-bottom: 1.5em;">Тут ви зможете знайти відповіді на ваші запитання</span>
+    <p>
+      <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+        Хто такий кур'єр Glovo?
+      </button>
+    </p>
+    <div class="collapse" id="collapse1">
+      <div class="card card-body">
+        Кур'єри Glovo — це користувачі нашої платформи, які здійснюють доставку необхідних товарів у потрібний час. Кожний із них — незалежний професіонал, який доставляє замовлення за попередньо узгодженим графіком, використовуючи власний транспортний засіб.
+      </div>
+    </div>
+    <p>
+      <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+        Як все відбувається?
+      </button>
+    </p>
+    <div class="collapse" id="collapse2">
+      <div class="card card-body">
+        Все просто! Процес не займе багато часу: зареєструйтеся на цій сторінці, перегляньте коротке інформаційне онлайн-відео та надішліть необхідні документи. Після цього потрібно ознайомитися з додатком Glovo Couriers і отримати ізотермічний рюкзак. Ось і все, ви готові співпрацювати з нашою платформою!
+      </div>
+    </div>
+    <p>
+      <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse2">
+        Що пропонує Glovo?
+      </button>
+    </p>
+    <div class="collapse" id="collapse3">
+      <div class="card card-body">
+        Glovo пропонує цікавий спосіб заробляти гроші та краще пізнавати власне місто та людей, які живуть у ньому. Приєднавшися до нашого сервісу, ви можете обирати зручний час для співпраці та отримувати дохід у вільний час.
+      </div>
+    </div>
+    <p>
+      <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse2">
+        Які вимоги потрібно виконати, щоб доставляти з Glovo?
+      </button>
+    </p>
+    <div class="collapse" id="collapse4">
+      <div class="card card-body">
+        Пропонувати послуги кур'єра на нашій платформі можуть повнолітні особи, що мають власний транспортний засіб, підписали з нами договір і дотримуються нормативних актів, що регулюють діяльність фізичних осіб-підприємців у своїй країні.
+      </div>
+    </div>
+  </div>
+  <footer><div class="footerLogo"><img src="imgs/Glovo_logo_white.png"></div>
+    <div class="footerDiv">
+      <h1 style="color: gray;font-size: 20px;margin-top: 1em;font-size: .9em;">
+        ДОПОМОГА</h1>
+      <nav>Веб-сайт для кур'єрів<br></nav>
+      <nav>Glovoapp.com<br></nav>
+      <nav>Glovo для партнерів</nav>
+
+    </div>
+    <div class="footerDiv">
+      <h1 style="color: gray;font-size: 20px;margin-top: 1em;font-size: .9em;">ПРАВОВА ІНФОРМАЦІЯ</h1>
+      <nav>Правила й умови<br></nav>
+      <nav>Політика конфіденційності<br></nav>
+      <nav>Політика використання файлів cookie</nav>
+
+    </div>
+    <div class="footerDiv">
+      <h1 style="color: gray;font-size: 20px;margin-top: 1em;font-size: .9em;">ДОДАТОК ДЛЯ КУР'ЄРІВ</h1>
+      <div class="app"><a href="https://play.google.com/store/apps/details?id=com.glovoapp.courier&pli=1"><img src="imgs/google.png"></img></a></div>
+      <div class="app"><a href="https://apps.apple.com/us/app/glovo-couriers/id1451416371"><img src="imgs/appstore.png"></img></a></div>
+
+    </div>
+  </footer>
+  <div class="lastfooter">©2023 Glovo</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script>
+      
+    </script>
+</body>
+</html>

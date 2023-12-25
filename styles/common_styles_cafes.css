@@ -1,0 +1,339 @@
+@media screen and (max-width: 1200px) {
+    .one-product{
+        width: 45% !important;
+    }
+}
+@media screen and (max-width:992px) {
+    .product-title{
+        font-size: 0.7em !important;
+    }
+    
+}
+@media screen and (max-width:875px) {
+    .footer-column{
+        width: 15em !important;
+        margin-block: 2em;
+    }
+    .footer-row{
+        flex-wrap: wrap;
+    }
+    .begin-btn,.glovo-search{
+        width:15em !important;
+    }
+    .sections-only{
+        display: none !important;
+    }
+    .all-products{
+        margin-left: 0 !important;
+    }
+    .your-order{
+        width: 30% !important;
+    }
+    .your-order p { 
+        font-size: 1em !important;
+        margin-right: 1em !important;
+        text-align: center !important;
+    }
+    .info-money {
+        margin-right: 1em !important;
+    }
+    
+}
+@media screen and (max-width:726px) {
+    .your-order p { 
+        font-size: 0.85em !important;
+    }
+    .begin-btn{
+        display: none;
+    }
+    
+}
+@media screen and (max-width:650px) {
+    .product-tilte{
+        font-size: 0.6em !important;
+    }
+    
+}
+@media screen and (max-width:650px) {
+    .one-product{
+        font-size: 0.6em !important;
+    }
+    .one-row-in-order{
+        font-size: 0.8em !important;
+        flex-wrap: wrap !important;
+    }
+    #orderButton{
+        font-size: 1em !important;
+    }
+    .your-order h2 {
+        font-size: 1.2em !important;
+        text-align: center !important;
+    }
+    .title-section{
+        width: 60vw !important;
+    }
+    .footer-row{
+        justify-content: center !important;
+    }
+    .footer-column{
+        width: 20em !important;
+    }
+    .footer-one-elem{
+        font-size: 1.5em !important;
+    }
+    .info-money,.removable p,.removable hr {
+        display: none !important;
+    }
+    
+}
+@media screen and (max-width:576px) {
+    .begin-btn{
+        display: none;
+    }
+    
+}
+header {
+    height: 7em;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-size: cover;
+    background-position: center bottom;
+}
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(5px);
+    z-index: -1; 
+}
+header>div{
+    height: 100%;
+    width: fit-content;
+}
+header>div>a>img{
+    height: 130%;
+}
+.glovo-search{
+    width: 25em;
+}
+.begin-btn{
+    background-color: rgb(0, 160, 130);
+    font-weight:bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    width: 10em;
+    margin-inline: 3em;
+}
+.glovo-search,.begin-btn {
+    margin-top: 2.5em;
+    border-radius: 2em;
+    border: none;
+    height: 35%;
+    text-align: center;
+}
+button:focus, input:focus {
+    outline: none;
+}
+.free{
+    background-color: #FFC244;
+    border-radius: 1em;
+    padding: 0.2em;
+    font-size: 0.7em;
+    font-weight: 900;
+    margin-left: 1em;
+}
+.main-section{
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.title-section{
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 1em;
+    width:70vw;
+    border-top-right-radius: 3em;
+}
+.title{
+    font-weight: 800;
+    font-size:2.2em
+}
+.top-partner{
+    background-color: #F5F5F5;
+    width: fit-content;
+    font-weight: bolder;
+    font-size: 0.7em;
+}
+.top-partner img{
+    width:1.5em
+}
+.title-images img{
+    width: 2em;
+}
+.title-images{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+}
+.section-word{
+    color:#00A082;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.section-word~span{
+    cursor: pointer;
+    font-size: 0.9em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sections-only a {
+    text-decoration: none;
+    color: black;
+}
+hr{
+    width:100%;
+}
+.cafe-search{
+    width:30vw;
+    height: fit-content;
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 1em;
+}
+.search-and-image{
+    width: fit-content;
+}
+.list-title{
+    font-size: 1.4em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+}
+.list-title-and-image img{
+    width: 2em;
+}
+.menu-and-sections{
+    width: 65vw;
+}
+.one-product {
+    border: 1px solid #e4e4e4;
+    border-radius: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 47%;
+}
+
+.one-product:hover {
+    transition: transform 0.3s;
+    transform: scale(1.05);
+}
+
+.one-product img{
+    width: 5em;
+    height: 5em;
+    border-radius: 0.5em;
+}
+.product-description{
+    font-size: 0.9em;
+    color:#6e6e6e;
+}
+.one-product button{
+    border: none;
+    border-radius: 100%;
+    color:#6e6e6e;
+    font-size: 2em;
+    width: 1.5em;
+}
+.product-list,.product-list-2{
+    width: 100%;
+}
+.your-order{
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 1em;
+    height: fit-content;
+    position: sticky;
+    top:0;
+}
+.your-order p {
+    font-size: 1.2em;
+    text-align: center;
+}
+.info-money{
+    text-align: center;
+}
+.product-in-order-list img{
+    cursor: pointer;
+}
+#orderButton{
+    margin-top: 2em;
+    color:white;
+    background-color: #00A082;
+    border-radius: 1em;
+    padding-inline: 1em;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: none;
+    cursor: pointer;
+}
+.temporary-dont-work{
+    background-color:#FFF3DA;
+    padding: 1em;
+    border-radius: 0.4em;
+}
+.dont-work-one-product{
+    border-radius: 0.3em;
+    height: 10em;
+    opacity: 0.6;
+    width: 20em;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.dont-work-category{
+    width: fit-content;
+    padding-inline: 0.8em;
+    padding-block: 0.3em;
+    font-size: 0.8em;
+    font-weight: 800;
+    background-color: #FFC244;
+    border-radius: 0.2em;
+}
+.dont-work-image{
+    margin-left: 3em;
+    width: 150px;
+    height: 100px;
+}
+.dont-work-image img{
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+}
+.product-category-title{
+    width: fit-content;
+}
+.your-order h2{
+    font-size: 1.5em;
+}
+footer{
+    background-color: #1D1D1D;
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
+    height: fit-content;
+    padding-bottom: 2em;
+}
+.footer-title{
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 0.8em;
+    text-align: center;
+}
+.footer-one-elem{
+    color: white;
+    margin-block: 0.4em;
+    font-size: 0.9em;
+    text-align: center;
+}
+.footer-column{
+    width: 15em;
+}
+.footer-column img{
+    width: 10em;
+    margin-bottom: 1em;
+}

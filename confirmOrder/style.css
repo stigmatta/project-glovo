@@ -1,0 +1,309 @@
+#map {
+    height: 100%;
+  }
+  
+  html,
+  body {
+    height: 120%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .custom-map-control-button {
+    background-color: #fff;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    padding: 0 0.5em;
+    font: 400 18px Roboto, Arial, sans-serif;
+    overflow: hidden;
+    height: 40px;
+    cursor: pointer;
+  }
+  .custom-map-control-button:hover {
+    background: rgb(235, 235, 235);
+  }
+*{
+    font-family: "Glovo Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#logo img
+{
+    max-width: 119px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-left: 11%;
+    margin-top: 3%;
+}
+#cafeNameHead
+{
+    margin-left: 20%;
+    font-size: 48px;
+    font-weight: 900;
+}
+#cafeNameProducts
+{
+    font-weight: bold;
+}
+#productQ
+{
+    font-weight: bold;
+}
+#productContainer
+{
+    margin-left: 20%;
+    margin-top: 4%;
+    width: fit-content;
+}
+#productList
+{
+    width: 100%;
+    font-size: 0.95em;
+    line-height: 3em;
+    margin-top: 3%;
+}
+#allergy
+{
+    font-weight: bold;
+    margin-top: 2em;
+    font-size: 18px;
+    margin-left: -1em;
+}
+#allergy img
+{
+    width: 2em;
+    margin-right: 1%;
+}
+
+#allergy hr
+{
+    margin-top: 2px;
+    width: 30em;
+    margin-left: 45px;
+}
+
+#cutlery
+{
+    margin-top: 4em;
+    display: flex;
+    font-size: 14px;
+    margin-left: -1em;
+}
+#cutlery h1{
+    font-size: 18px;
+    font-weight: bold;
+
+}
+#cutlery img
+{
+    margin-top: 1.5em;
+    width: 2.2em;
+    height: 2.2em;
+    margin-right: 1em;
+}
+#cutlerySwitch
+{
+   font-size: 2.2em;
+}
+#cutlerySwitch:focus
+{
+    box-shadow: none;
+}
+#cutlery hr
+{
+    margin-top: 4px;
+    width: 60em;
+    margin-left: 10em;
+}
+#delivery
+{
+    margin-top: 5em;
+    margin-left: 20%;
+}
+#delivery h1,#payment h1
+{
+    font-size: 30px;
+    font-weight: bold;
+}
+#delivery #map
+{
+    height: 10em;
+    width: 30em;
+}
+#adressInput, #cardInput
+{
+    width: 22.5em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 18px;
+}
+#adressInput:focus ,#cardInput:focus,#floatingPromo:focus,#appartmentInput:focus,#houseInput:focus,#streetInput:focus,
+#numberInput:focus,#cvvInput:focus,#dateInput:focus
+{
+    outline: 0 !important;
+    box-shadow: none !important;
+    border-color: rgb(0, 160, 130);;
+}
+#appartmentInput,#houseInput,#streetInput,#numberInput,#cvvInput,#dateInput
+{
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    margin-bottom: 1em;
+}
+#delivery img
+{
+    height: 2.5em;
+    width: auto;
+}
+#otherPerson
+{
+    font-weight: 300;
+    margin-top: 2em;
+    font-size: 18px;
+    margin-left: 20%;
+}
+#otherPerson img
+{
+    width: 2em;
+    height: 2em;
+    margin-right: 10px;
+}
+
+#otherPerson hr, #promo hr
+{
+    margin-top: 2px;
+    width: 30em;
+    margin-left: 48px;
+
+}
+#deliveryTime
+{
+    margin-top: 2em;
+    margin-left: 11em;
+    width: 36.5em;
+    height: 3.5em;
+    background-color: rgb(255, 243, 218);
+    border-radius: .7em;
+    border: 1px solid;
+    border-color: rgb(255, 194, 68);
+    padding: 4px;
+    padding-left: 1em;
+}
+#tracking
+{
+    margin-top: 1em;
+    margin-left: 11.5em;
+    display: flex;
+}
+#tracking img
+{
+    width: 2em;
+    height: 2em;
+}
+#payment
+{
+    margin-top: 5em;
+    margin-left: 10.9em;
+}
+#promo
+{
+    margin-top: 1em;
+    display: flex;
+}
+#promo img
+{
+    width: 2em;
+    height: 2em;
+    margin-top: 1em;
+    margin-right: 1em;
+}
+#floatingPromo
+{
+    border: none;
+}
+#floatingPromo:active
+{
+    box-shadow: none !important;
+}
+#submitPromo
+{
+    display: none;
+    background-color: rgb(0, 160, 130);
+    width: 8em;
+    height: 2em;
+    border-radius: 2em;
+    color: white;
+    border:none;
+    margin-top: .7em;
+    margin-left: 12em;
+}
+#errorPromo
+{
+    display: none;
+    color: red;
+    margin-left: 3em;
+}
+#summHead
+{
+ display: flex;
+ justify-content: space-between;
+ font-size: 2em;
+}
+#summ
+{
+    width: 330px;
+    margin-top: 15%;
+    display: block;
+    margin-left: 5em;
+}
+#summInfo
+{
+    font-size: 18px;
+    display: flex;
+    width: 330px;
+}
+#main
+{
+    display: flex;
+    justify-content: center;
+}
+#submit
+{
+    margin-top: 5%;
+    width: 100%; 
+    height: 3em;
+    border-radius: 2em;
+    background-color: rgb(0, 160, 130);
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+#cutleryText
+{
+    width: 30em;
+    height: 2em;
+    display: block;
+}
+@media screen and (max-width: 1100px) {
+    #main {
+        display: block;
+        margin-left: 0;
+    }
+    #logo
+    {
+        display: none;
+    }
+    #summ
+    {
+        margin-top: 5em;
+        margin-left: 17em;
+    }
+}

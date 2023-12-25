@@ -1,0 +1,250 @@
+body
+{
+    font-family: "Glovo Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.logo
+{
+    width: 1056px;
+    height: auto;
+    margin:1em auto;
+}
+.footerLogo
+{
+    height: 2.5em;
+    height: auto;
+}
+.footerLogo img
+{
+    height: 2.5em;
+}
+.logo img
+{
+    height: 2.5em;
+    margin-left: 1.5em;
+
+}
+.container
+{
+    width: 1056px;
+    background-color: rgb(255, 209, 106);
+    height: 860px;
+    margin:0 auto;
+    padding-top: 20px;
+}
+.text
+{
+    padding-top: 1em;
+    color: white;
+    font-size: 40px;
+    margin-left: 1.5em;
+    font-weight: bold;
+    float: left;
+}
+#ridersInfo
+{
+    margin: 0 0 0 auto;
+    margin-right: 5em;
+    width: 23em;
+    height: 820px;
+    background-color: white;
+    box-shadow: 2px 2px 2px gray;
+    border-radius: 5px;
+    padding: 1.4em;
+    user-select: none;
+}
+#ridersInfo h1
+{
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: .9em;
+}
+.form-control
+{
+    margin-top: 1em;
+    border: none;
+    border-bottom: 2px solid lightgray;
+    border-radius: 0;
+    color: gray;
+    box-shadow: none !important;
+}
+
+.form-select
+{
+    margin-top: 1.5em;
+    border: none;
+    border-bottom: 2px solid lightgray;
+    border-radius: 0;
+    color: black;
+    box-shadow: none !important;
+}
+
+.form-control:focus,.form-control:hover, .form-select:focus, .form-select:hover
+{
+
+    border-bottom: rgb(43, 43, 43) 2px solid;
+}
+
+#transport
+{
+    margin-top: 1em;
+    font-size: 1.1em;
+    display: flex;
+   
+}
+.vehicle
+{
+    width: 150px;
+    height: 85px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    margin-left: .5em;
+    margin-right: .5em;
+    display: flex;
+    align-items: center
+
+}
+.vehicle img
+{
+    margin: 0 auto;
+    height: 70px;
+    width: 70px;
+}
+
+.vehicle:focus
+{
+    border-color: rgb(235, 198, 94);
+    box-shadow: 1px 1px 2px 2px rgb(235, 198, 94);
+}
+
+.submit
+{
+    margin-top: 1em;
+    background-color: rgb(42, 187, 155);
+    border: none;
+    border-radius: 1em;
+    width: 100%;
+    height: 1.7em;
+    font-size: 1.5em;
+    color: white;
+    transition: background-color .2s;
+    margin-bottom: .7em;
+    text-align: center;
+}
+
+.submit:hover
+{
+    background-color: rgb(0, 160, 130);
+}
+
+#rules
+{
+    display: inline;
+    margin-left: 1em;
+    font-size: smaller;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#benefits
+{
+
+    width: 1056px;
+    margin: 0 auto;
+    user-select: none;
+    margin-bottom: 1.5em;
+}
+
+#benefits img
+{
+    margin-top: 1em;
+    width: 100%;
+}
+
+#FAQ
+{
+    width: 800px;
+    margin: 0 auto;
+}
+.appendBtn
+{
+    background-color: white;
+    width: 100%;
+    height: 2em;
+    text-align: left;
+    border: 2px solid lightgray;
+    border-left:none ;
+    border-right:none ;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn
+{
+    font-weight: bold;
+    border-top: 1px solid lightgrey;
+    width: 100%;
+    text-align: left;
+    border-radius: 0;
+    height: 3em;
+    padding-top: 1.2em;
+}
+.btn:hover
+{
+    border-top: 1px solid lightgrey;
+}
+.btn:active,.btn:focus, .btn:active
+{
+    border: none;
+    border-top: 1px solid lightgrey;
+
+}
+.card
+{
+    border: none;
+}
+
+footer
+{
+    padding-top: 15em;
+    background-image: url(imgs/footerIMG.png);
+    width: 100%;
+    height: 27em;
+    background-repeat: no-repeat;
+    display: flex;
+    padding-left: 30em
+}
+.footerDiv
+{
+    padding-left: 7em;
+    color: white;
+}
+.footerDiv nav
+{
+    cursor: pointer;
+    margin-bottom: .5em;
+    font-size: .9em;
+}
+.footerDiv nav:hover
+{
+    text-decoration: underline;
+}
+.lastfooter
+{
+    padding-top: 1.2em;
+    width: 100%;
+    height: 3.5em;
+    text-align: center;
+    color: white;
+    background-color: rgb(59, 59, 59);
+}
+.app
+{
+    width: 10em;
+    margin-bottom: 1em;
+}
+.app img
+{
+    width: 100%;
+}

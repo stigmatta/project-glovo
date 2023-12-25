@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="../styles/common_styles_cafes.css">
+    </head>
+    <body>
+        <template id = "product-template-atb">
+            <div class = "one-product d-flex flex-column p-3 mx-2 my-2">
+                <div class = "product-image-title d-flex">
+                    <img class = "product-image mr-1">
+                    <div class = "product-title-and-description d-flex flex-column mx-2">
+                        <p class = "product-title mb-3"></p>
+                        <p class = "product-description"></p>
+                    </div>
+                </div>
+                <div class = "price-and-add d-flex justify-content-between">
+                    <span class = "product-price"></span>
+                    <button class = "add-button">+</button>
+                </div>
+            </div>
+
+        </template>
+
+        <template id = "atb-order-product-template">
+            <div class = "product-in-order-list mt-3">
+                <div class ="one-row-in-order d-flex justify-content-between">
+                    <b class = "product-amount-in-list"></b>
+                    <span class = "product-name-in-list"></span>
+                    <span class = "product-price-in-list"></span>
+                </div>
+                <div class = "second-row-in-order d-flex justify-content-between">
+                    <img class = "add-plus-one" src="../img/plus.svg">
+                    <img class ="sub-minus-one" src="../img/minus.svg">
+                </div>
+            </div>
+        </template>
+
+        </template>
+        <header class="d-flex justify-content-around align-items-center" style="background-image: url(../img/atb-back.jpeg);">
+            <div>
+                <a href="../index.html"><img src="../img/logo-glovo-2048.png" alt="Glovo Logo"></a>
+            </div>
+            <div>
+                <input class="glovo-search" type="search" name="main-search" id="main-search" placeholder="Пошук" onfocus="hidePlaceholder(this)" onblur="showPlaceholder(this)">
+                <button class="begin-btn" type="button" id="begin-btn">Розпочати!</button>
+            </div>
+        </header>
+        <div class = "d-flex mx-4 my-5">
+            <div class = "d-flex flex-column main-section">
+                <div class = "d-flex flex-column title-section py-5 px-4">
+                    <h1 class = "title">ATB/АТБ</h1>
+                    <span class = "d-inline title-images">
+                        <img class="mr-2" src = "../img/RatingExcellentLight.png">
+                        <span class="mr-5">94%</span>
+                        <img class = "mr-2" src ="../img/EtaLight.png">
+                        <span class ="mr-5">15-25`</span>
+                        <img class = "mr-2" src = "../img/DeliveryFeeLight.png">
+                        <span>49,00₴</span>
+                    </span>
+                    <span class = "text-info mt-3">Вартість пакету буде додана до загальної суми замовлення. При замовленні вагових товарів буде додана вартість пакувальних матеріалів</span>
+                </div>
+                <div class = "d-flex menu-and-sections my-2 ml-3">
+                    <div class = "d-flex flex-column sections-only">
+                        <span class = "d-inline section-word font-weight-bold mt-3 mb-5">
+                            <img src="../img/sections-square.svg">
+                            Розділи
+                        </span>
+                        <span>Хіт продажів</span>
+                        <hr>
+                        <span>Преміальний алкоголь</span>
+                        <hr>
+                        <span>Акція 7 днів</span>
+                        <hr>
+                        <span>Горілка Nemiroff</span>
+                        <hr>
+                        <span>Чіпси, снеки</span>
+                        <hr>
+                        <span>Морозиво</span>
+                        <hr>
+                        <span>Овочі та фрукти</span>
+                        <hr>
+                        <span>М'ясо та яйця</span>
+                        <hr>
+                        <span>Ковбаса та м'ясні делікатеси</span>
+                        <hr>
+                        <span>Молочні продукти</span>
+                        <hr>
+                        <span>Алкоголь</span>
+                        <hr>
+                    </div>
+                    <div class = "d-flex flex-column my-2 ml-5 all-products">
+                        <span class = "d-inline search-and-image">
+                            <img src="../img/search-new.svg">
+                            <input class = "px-3 py-2 mx-2 cafe-search" type = "search" placeholder="Шукати в ATB/АТБ" onfocus="hidePlaceholder(this)" onblur="showPlaceholder(this)">
+                        </span>
+                        <span class = "d-inline my-4 list-title-and-image">
+                            <img src = "../img/Top.png">
+                            <p class="d-inline list-title ml-3" id="best-sales-category" >Хіт продажів</p>
+                        </span>
+                        <div class = "find product-list d-flex flex-wrap mt-3" id = "atb-product-list"></div>
+                    </div>
+                </div>
+            </div>
+            <div class = "d-flex flex-column your-order mx-3 py-5 px-4">
+                <h2 class = "font-weight-bold mb-5">Ваше замовлення</h2>
+                <div class ="removable d-flex flex-column" id="atb-removable">
+                    <img src="../img/astronaut-grey-scale.svg">
+                    <p class = "mt-3">Наразі у кошику пусто. Додані вами продукти відображуватимуться тут!</p>
+                    <hr>
+                </div>
+                <div id="orderButton" class ="order-button" id = "cafe-id" >Замовити продукти 
+                    &lpar;<span class ="d-inline order-amount"></span>&rpar;
+                     за <span class = "d-inline order-price"></span></div>
+                <span class = "d-inline info-money mt-5">
+                    <img src = "../img/info.svg">
+                    Якщо сума замовлення сягне <b>180,00 ₴</b>, ви заощадите <b>30,00 ₴</b> на зборах!
+                </span>
+            </div>
+        </div>
+        <footer class = "d-flex flex-column p-5">
+            <div style = "width: 7em; margin: 2em;">
+                <img src = "../img/glovo-white.svg" style = "width: 100%;">
+            </div>
+            <div class = "footer-row d-flex justify-content-between">
+                <div class = "footer-column d-flex flex-column ml-4 align-items-center">
+                    <span class = "footer-title font-weight-bold">Приєднуйтеся до нас</span>
+                    <span class = "footer-one-elem">Вакансії</span>
+                    <span class = "footer-one-elem">Glovo для партнерів</span>
+                    <span class = "footer-one-elem">Кур'єри</span>
+                    <span class = "footer-one-elem">Glovo Business</span>
+                </div>
+                <div class = "footer-column d-flex flex-column ml-4 align-items-center">
+                    <span class = "footer-title font-weight-bold">Корисні посилання</span>
+                    <span class = "footer-one-elem">Про нас</span>
+                    <span class = "footer-one-elem">Часті запитання</span>
+                    <span class = "footer-one-elem">Glovo Prime</span>
+                    <span class = "footer-one-elem">Блог</span>
+                    <span class = "footer-one-elem">Зв'язатися з нами</span>
+                    <span class = "footer-one-elem">Безпека</span>
+                </div>
+                <div class = "footer-column d-flex flex-column ml-4 align-items-center">
+                    <span class = "footer-title font-weight-bold">Ми у соціальних мережах</span>
+                    <span class = "footer-one-elem">Facebook</span>
+                    <span class = "footer-one-elem">Twitter</span>
+                    <span class = "footer-one-elem">Instagram</span>
+                </div>
+                <div class = "footer-column d-flex flex-column ml-4 align-items-center">
+                    <img src = "../becomeARider/imgs/appstore.png">
+                    <img src = "../becomeARider/imgs/google.png">
+                    <span class = "footer-one-elem">Політика конфіденційності</span>
+                    <span class = "footer-one-elem">Політика використання файлів cookie</span>
+                    <span class = "footer-one-elem">Комплаєнс</span>
+                </div>
+            </div>
+        </footer>
+        <script src="../js/cafes.js"></script>
+        <script src = "../js/atb.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
